@@ -247,4 +247,6 @@ public:
 
 	void lmw(UGeckoInstruction inst);
 	void stmw(UGeckoInstruction inst);
+
+	void dcbx(UGeckoInstruction inst);
 };
