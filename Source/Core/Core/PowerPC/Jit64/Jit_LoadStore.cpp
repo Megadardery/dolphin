@@ -353,6 +353,12 @@ void Jit64::dcbx(UGeckoInstruction inst)
 	}
 
 	gpr.UnlockAllX();
+
+	// icbi
+	if (inst.SUBOP10 == 982)
+	{
+		WriteExit(js.compilerPC + 4);
+	}
 }
 
 void Jit64::dcbt(UGeckoInstruction inst)
